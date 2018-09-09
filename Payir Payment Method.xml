@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<plugin name="Pay.ir Payment Method" version_long="10000" version_human="1.0.0" author="Pay.ir" website="https://pay.ir" update_check="https://pay.ir">
+	<hooks/>
+	<htmlFiles/>
+	<cssFiles/>
+	<jsFiles/>
+	<resourcesFiles/>
+	<lang><word key="gateway__Payir" js="0">Pay.ir</word><word key="payir_api" js="0">API Key</word></lang>
+	<versions>
+		<version long="10000" human="1.0.0">
+			<![CDATA[//<?php
+
+			if (!defined('\IPS\SUITE_UNIQUE_KEY')) {
+
+				header((isset($_SERVER['SERVER_PROTOCOL']) ? $_SERVER['SERVER_PROTOCOL'] : 'HTTP/1.0') . '403 Forbidden');
+				exit;
+			}
+
+			class ips_plugins_setup_install
+			{
+				public function step1()
+				{
+					return TRUE;
+				}
+			}
+			]]>
+		</version>
+	</versions>
+</plugin>
